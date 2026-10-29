@@ -1,0 +1,6 @@
+# dsh-slash-new bundle patch: one insert over the profile root.
+# Host half registers the /new command; the client half switches to a
+# blank session when the command settles.
+- insert:
+    - id: slash-new
+      name: 'dsh-slash-new'

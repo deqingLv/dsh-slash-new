@@ -1,0 +1,53 @@
+{
+  "name": "dsh-slash-new",
+  "version": "1.0.0",
+  "description": "A DSH plugin that adds /new: open a blank session in the current workspace and carry the old session's permission preset and agent preset over to it.",
+  "type": "module",
+  "license": "MIT",
+  "author": "deqingLv",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check client/client.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deqingLv/dsh-slash-new.git"
+  },
+  "homepage": "https://github.com/deqingLv/dsh-slash-new#readme",
+  "bugs": {
+    "url": "https://github.com/deqingLv/dsh-slash-new/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "slash-command",
+    "new-session",
+    "session-management"
+  ]
+}
